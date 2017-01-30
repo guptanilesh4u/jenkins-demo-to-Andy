@@ -1,0 +1,23 @@
+<configuration>
+   <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    
+  <!--  <logger name="org.hibernate" level="WARN" />
+
+   <logger name="org.springframework" level="WARN" />
+   <logger name="org.springframework.transaction" level="WARN" />
+   <logger name="org.springframework.security" level="WARN" /> to debug security related issues (DEBUG)
+   <logger name="org.springframework.web.servlet.mvc" level="WARN" /> some serialization issues are at trace level here: org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod
+     
+     -->
+   <logger name="net.boot.spring.starter" level="WARN" additivity="false">
+       <appender-ref ref="CONSOLE"/>
+       <appender-ref ref="FILE"/>
+   </logger>
+   <logger name="net.boot.spring.starter.service" level="DEBUG" additivity="false">
+       <appender-ref ref="CONSOLE"/>
+       <appender-ref ref="FILE"/>
+   </logger>
+   <logger name="net.boot.spring.starter.controller.EmployeeController" level="DEBUG" additivity="true">
+   </logger>
+
+</configuration>
